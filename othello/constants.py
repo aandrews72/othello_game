@@ -1,0 +1,10 @@
+import pygame
+
+WIDTH, HEIGHT = 1000, 800
+ROWS, COLUMNS = 8, 8
+SPOT_SIZE = WIDTH//COLUMNS
+
+GREEN = (0, 255, 0)
+BLACK = (0, 0, 0)
+WHITE = (255, 255, 255)
+BLUE = (0, 0, 255)
