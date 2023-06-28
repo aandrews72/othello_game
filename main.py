@@ -21,7 +21,7 @@ def main():
                 pos = pygame.mouse.get_pos()
                 row, col = pos[0] // SPOT_SIZE, pos[1] // SPOT_SIZE
                 if current_piece:
-                    if current_piece.move(row, col, board.board):
+                    if current_piece.make_move(row, col, board.board):
                         current_piece = None
                 else:
                     current_piece = board.board[row][col]
@@ -39,22 +39,3 @@ def main():
 if __name__ == "__main__":
     main()
 
-# def main():
-#     run = True
-#     clock = pygame.time.Clock()
-#     board = Board()
-
-#     while run:
-#         clock.tick(60) # 60 FPS frame rate
-#         for event in pygame.event.get():
-#             if event.type == pygame.QUIT:
-#                 run = False
-#                 break
-
-#         board.draw_board(WINDOW)
-#         pygame.display.update()
-    
-#     pygame.quit()
-
-# if __name__ == "__main__":
-#     main()
